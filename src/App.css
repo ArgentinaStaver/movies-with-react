@@ -1,0 +1,63 @@
+.headers h1 {
+  text-align: center;
+  padding: 50px 0 70px;
+
+}
+
+.headers h2 {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.page {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.search {
+  background-color: #f4f3ff;
+  border: 1px solid #838289;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 49%;
+}
+
+.search-content {
+  padding: 16px;
+}
+
+.search-content h5 {
+  padding-bottom: 7px;
+}
+
+.search-content input {
+  border-radius: 5px;
+  width: 407px;
+  border: 1px solid #838289;
+}
+
+.films-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.film {
+  border: 1px solid #838289;
+  border-radius: 4px;
+  width: 395px;
+  box-sizing: border-box;
+  margin-top: 13px;
+  width: 49%;
+
+}
+
+.title {
+  background-color: #f4f3ff;
+  padding: 10px;
+}
+
+.year {
+  padding: 10px;
+}
