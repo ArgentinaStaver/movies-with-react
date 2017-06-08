@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class FilmsList extends Component {
-    moviesList() {
+    moviesFilter() {
       const { movies, filterText } = this.props;
       const moviesList = movies
         .filter(film => {
@@ -23,7 +23,7 @@ class FilmsList extends Component {
       return(
         <div className="page">
           <div className="films-list">
-            {this.moviesList()}
+            {this.moviesFilter()}
           </div>
         </div>
       );
