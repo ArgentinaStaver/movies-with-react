@@ -2,38 +2,37 @@ import React, { Component } from 'react';
 import Headers from './components/Headers';
 import Search from './components/Search';
 import FilmsList from './components/FilmsList';
-import movies from './constants/movies';
+import allMovies from './constants/movies';
 import './App.css';
 
 class App extends Component {
-    constructor(props){
-      super(props)
-      this.state = {
-        filterText: ''
-      }
+  constructor(props){
+    super(props)
+    this.state = {
+      movies: allMovies
     }
+  }
 
-    filterUpdate(value) {
-      this.setState({
-        filterText: value
-      })
-    }
+  filterMovies(filteredMovies) {
+    this.setState({
+      movies: filteredMovies
+    })
+  }
 
-    render() {
-        return (
-            <div>
-                <Headers />
-                <Search
-                filterText={this.state.filterText}
-                filterUpdate={this.filterUpdate.bind(this)}
-                 />
-                <FilmsList
-                movies={movies}
-                filterText={this.state.filterText}
-                 />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <Headers />
+        <Search
+          movies={allMovies}
+          filterMovies={this.filterMovies.bind(this)}
+        />
+        <FilmsList
+          movies={this.state.movies}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
